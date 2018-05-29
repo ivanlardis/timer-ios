@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		5EC1A13887EE94CD49DB0C5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EC1A37A9490761E8856535A /* LaunchScreen.storyboard */; };
+		5EC1A1E7FF5530941CEDC7CA /* SetingViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC1A2C7ED6F00CE108557CF /* SetingViewControler.swift */; };
 		5EC1AB08F10FF828F1CA2E09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC1AB6177B9937E68B26A37 /* AppDelegate.swift */; };
 		5EC1AB0A603AC577A20DE85B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EC1AC5029832EC769709983 /* Main.storyboard */; };
 		5EC1AD0BD52CE79A8D5A2A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EC1AA10D38CB082FB9FC313 /* Assets.xcassets */; };
 		5EC1AF2FC152B001DD0C58AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC1A27B5B2B76122F02D2E1 /* ViewController.swift */; };
+		8ABCFFAE20BD5F9200A790A5 /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABCFFAD20BD5F9200A790A5 /* Prefs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5EC1A27B5B2B76122F02D2E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5EC1A2C7ED6F00CE108557CF /* SetingViewControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetingViewControler.swift; sourceTree = "<group>"; };
 		5EC1AA10D38CB082FB9FC313 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EC1AAA5DC1EFD8CCAD28737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EC1AB6177B9937E68B26A37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EC1AC2D4499A33A206FABE8 /* timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = timer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC1AC85303241000C63ADE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5EC1AE63EDF4C3A4750D1A8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		8ABCFFAD20BD5F9200A790A5 /* Prefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prefs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,12 +50,14 @@
 		5EC1AB83869666DEBE644F34 /* timer */ = {
 			isa = PBXGroup;
 			children = (
+				8ABCFFAB20BD5F7000A790A5 /* utils */,
 				5EC1AE63EDF4C3A4750D1A8D /* Info.plist */,
 				5EC1AA10D38CB082FB9FC313 /* Assets.xcassets */,
 				5EC1A37A9490761E8856535A /* LaunchScreen.storyboard */,
 				5EC1AB6177B9937E68B26A37 /* AppDelegate.swift */,
 				5EC1AC5029832EC769709983 /* Main.storyboard */,
 				5EC1A27B5B2B76122F02D2E1 /* ViewController.swift */,
+				5EC1A2C7ED6F00CE108557CF /* SetingViewControler.swift */,
 			);
 			path = timer;
 			sourceTree = "<group>";
@@ -62,6 +68,14 @@
 				5EC1AC2D4499A33A206FABE8 /* timer.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8ABCFFAB20BD5F7000A790A5 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				8ABCFFAD20BD5F9200A790A5 /* Prefs.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +143,8 @@
 			files = (
 				5EC1AB08F10FF828F1CA2E09 /* AppDelegate.swift in Sources */,
 				5EC1AF2FC152B001DD0C58AD /* ViewController.swift in Sources */,
+				8ABCFFAE20BD5F9200A790A5 /* Prefs.swift in Sources */,
+				5EC1A1E7FF5530941CEDC7CA /* SetingViewControler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +313,7 @@
 				5EC1A738A8ABEFBB6668074D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5EC1A734647CD304F0521A04 /* Build configuration list for PBXProject "timer" */ = {
 			isa = XCConfigurationList;

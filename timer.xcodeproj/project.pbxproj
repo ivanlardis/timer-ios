@@ -7,16 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A71A4141FE63D7CF4372DE1 /* Pods_timer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 571AD97B075AD7795DF4E09D /* Pods_timer.framework */; };
 		5EC1A13887EE94CD49DB0C5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EC1A37A9490761E8856535A /* LaunchScreen.storyboard */; };
 		5EC1A1E7FF5530941CEDC7CA /* SetingViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC1A2C7ED6F00CE108557CF /* SetingViewControler.swift */; };
 		5EC1AB08F10FF828F1CA2E09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC1AB6177B9937E68B26A37 /* AppDelegate.swift */; };
 		5EC1AB0A603AC577A20DE85B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EC1AC5029832EC769709983 /* Main.storyboard */; };
 		5EC1AD0BD52CE79A8D5A2A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EC1AA10D38CB082FB9FC313 /* Assets.xcassets */; };
 		5EC1AF2FC152B001DD0C58AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC1A27B5B2B76122F02D2E1 /* ViewController.swift */; };
+		8AB05FAF20CFF44900CF7863 /* TimerViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB05FAE20CFF44900CF7863 /* TimerViewControler.swift */; };
+		8AB05FB220CFF80500CF7863 /* ITimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB05FB120CFF80500CF7863 /* ITimerView.swift */; };
+		8AB05FB420CFF81500CF7863 /* TimerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB05FB320CFF81500CF7863 /* TimerPresenter.swift */; };
 		8ABCFFAE20BD5F9200A790A5 /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABCFFAD20BD5F9200A790A5 /* Prefs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		571AD97B075AD7795DF4E09D /* Pods_timer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_timer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC1A27B5B2B76122F02D2E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5EC1A2C7ED6F00CE108557CF /* SetingViewControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetingViewControler.swift; sourceTree = "<group>"; };
 		5EC1AA10D38CB082FB9FC313 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -25,7 +30,12 @@
 		5EC1AC2D4499A33A206FABE8 /* timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = timer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC1AC85303241000C63ADE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5EC1AE63EDF4C3A4750D1A8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		8AB05FAE20CFF44900CF7863 /* TimerViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewControler.swift; sourceTree = "<group>"; };
+		8AB05FB120CFF80500CF7863 /* ITimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITimerView.swift; sourceTree = "<group>"; };
+		8AB05FB320CFF81500CF7863 /* TimerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPresenter.swift; sourceTree = "<group>"; };
 		8ABCFFAD20BD5F9200A790A5 /* Prefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prefs.swift; sourceTree = "<group>"; };
+		8B6B2464C32544FCB81457C5 /* Pods-timer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-timer.release.xcconfig"; path = "Pods/Target Support Files/Pods-timer/Pods-timer.release.xcconfig"; sourceTree = "<group>"; };
+		FBE6D4EEF28D3B1AE33622F8 /* Pods-timer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-timer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-timer/Pods-timer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,23 +43,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A71A4141FE63D7CF4372DE1 /* Pods_timer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		099BFBA9683E046DB75D110A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FBE6D4EEF28D3B1AE33622F8 /* Pods-timer.debug.xcconfig */,
+				8B6B2464C32544FCB81457C5 /* Pods-timer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5EC1A0C3113226E689BAAFFE = {
 			isa = PBXGroup;
 			children = (
 				5EC1AF160EAE4644B60A1D32 /* Products */,
 				5EC1AB83869666DEBE644F34 /* timer */,
+				099BFBA9683E046DB75D110A /* Pods */,
+				6B6215360B61B7943B1151D4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		5EC1AB83869666DEBE644F34 /* timer */ = {
 			isa = PBXGroup;
 			children = (
+				8AB05FB020CFF7E600CF7863 /* timer */,
 				8ABCFFAB20BD5F7000A790A5 /* utils */,
 				5EC1AE63EDF4C3A4750D1A8D /* Info.plist */,
 				5EC1AA10D38CB082FB9FC313 /* Assets.xcassets */,
@@ -70,6 +93,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		6B6215360B61B7943B1151D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				571AD97B075AD7795DF4E09D /* Pods_timer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8AB05FB020CFF7E600CF7863 /* timer */ = {
+			isa = PBXGroup;
+			children = (
+				8AB05FAE20CFF44900CF7863 /* TimerViewControler.swift */,
+				8AB05FB120CFF80500CF7863 /* ITimerView.swift */,
+				8AB05FB320CFF81500CF7863 /* TimerPresenter.swift */,
+			);
+			path = timer;
+			sourceTree = "<group>";
+		};
 		8ABCFFAB20BD5F7000A790A5 /* utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,9 +126,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5EC1A5DB0268F78224EB283C /* Build configuration list for PBXNativeTarget "timer" */;
 			buildPhases = (
+				74E7F9A6F679E85F9FA06814 /* [CP] Check Pods Manifest.lock */,
 				5EC1A3E7877BDED87DFCC358 /* Sources */,
 				5EC1A126FECD72B3ECB3633D /* Frameworks */,
 				5EC1A9964B492E54567D80D9 /* Resources */,
+				85DCC315E0CF89D6F2BDDAC1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,12 +179,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		74E7F9A6F679E85F9FA06814 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-timer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85DCC315E0CF89D6F2BDDAC1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-timer/Pods-timer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-timer/Pods-timer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5EC1A3E7877BDED87DFCC358 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5EC1AB08F10FF828F1CA2E09 /* AppDelegate.swift in Sources */,
+				8AB05FAF20CFF44900CF7863 /* TimerViewControler.swift in Sources */,
+				8AB05FB220CFF80500CF7863 /* ITimerView.swift in Sources */,
+				8AB05FB420CFF81500CF7863 /* TimerPresenter.swift in Sources */,
 				5EC1AF2FC152B001DD0C58AD /* ViewController.swift in Sources */,
 				8ABCFFAE20BD5F9200A790A5 /* Prefs.swift in Sources */,
 				5EC1A1E7FF5530941CEDC7CA /* SetingViewControler.swift in Sources */,
@@ -229,9 +316,12 @@
 		};
 		5EC1A738A8ABEFBB6668074D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B6B2464C32544FCB81457C5 /* Pods-timer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = timer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lardis.timer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -242,9 +332,12 @@
 		};
 		5EC1A8A23BF6879B9BD45AA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBE6D4EEF28D3B1AE33622F8 /* Pods-timer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = timer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lardis.timer;
 				PRODUCT_NAME = "$(TARGET_NAME)";

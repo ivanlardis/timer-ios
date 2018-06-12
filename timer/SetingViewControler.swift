@@ -13,24 +13,24 @@ class SetingViewControler: UITableViewController {
     @IBOutlet weak var cycleTimeTextView: UILabel!
     @IBOutlet weak var countSetTimeTextView: UILabel!
     @IBOutlet weak var restBetweenSetsTimeTextView: UILabel!
-    var userDefaults = UserDefaults.init()
+   
 
 
     func minus(prefs: Prefs, minValue: Int) -> Int {
-        var integer = userDefaults.integer(forKey: prefs.rawValue)
+        var integer = Prefs.getInt(pref: prefs)
         if (integer > minValue) {
             integer -= 1;
         }
-
-        userDefaults.set(integer, forKey: prefs.rawValue)
+        Prefs.setInt(pref: prefs, value: integer) 
         return integer
 
     }
 
     func plus(prefs: Prefs) -> Int {
-        var integer = userDefaults.integer(forKey: prefs.rawValue)
+        var integer = Prefs.getInt(pref: prefs)
         integer += 1;
-        userDefaults.set(integer, forKey: prefs.rawValue)
+        
+        Prefs.setInt(pref: prefs, value: integer)
 
         return integer
 
@@ -38,7 +38,7 @@ class SetingViewControler: UITableViewController {
 
     func getIntByPrefs(_ prefs: Prefs) -> Int {
         print(prefs.rawValue)
-        return userDefaults.integer(forKey: prefs.rawValue)
+        return Prefs.getInt(pref: prefs)
 
     }
 

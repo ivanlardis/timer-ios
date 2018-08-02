@@ -47,6 +47,8 @@ class TimerViewControler: UIViewController, ITimerView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("TimerViewControler viewDidLoad")
           presenter = TimerPresenter.init(iTimerView: self)
  
     }

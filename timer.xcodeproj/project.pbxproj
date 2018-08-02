@@ -18,6 +18,12 @@
 		8AB05FB220CFF80500CF7863 /* ITimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB05FB120CFF80500CF7863 /* ITimerView.swift */; };
 		8AB05FB420CFF81500CF7863 /* TimerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB05FB320CFF81500CF7863 /* TimerPresenter.swift */; };
 		8ABCFFAE20BD5F9200A790A5 /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABCFFAD20BD5F9200A790A5 /* Prefs.swift */; };
+		8AF6679D211386CD004D69C5 /* HistoryViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF6679C211386CD004D69C5 /* HistoryViewControler.swift */; };
+		8AF6679F21138D03004D69C5 /* HistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF6679E21138D03004D69C5 /* HistoryPresenter.swift */; };
+		8AF667A021139007004D69C5 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF667A121139007004D69C5 /* RxCocoa.framework */; };
+		8AF667A22113900C004D69C5 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF667A32113900C004D69C5 /* RxSwift.framework */; };
+		8AF667A4211390AE004D69C5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF667A5211390AE004D69C5 /* Realm.framework */; };
+		8AF667A6211390B2004D69C5 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF667A7211390B2004D69C5 /* RealmSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +40,12 @@
 		8AB05FB120CFF80500CF7863 /* ITimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITimerView.swift; sourceTree = "<group>"; };
 		8AB05FB320CFF81500CF7863 /* TimerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPresenter.swift; sourceTree = "<group>"; };
 		8ABCFFAD20BD5F9200A790A5 /* Prefs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prefs.swift; sourceTree = "<group>"; };
+		8AF6679C211386CD004D69C5 /* HistoryViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewControler.swift; sourceTree = "<group>"; };
+		8AF6679E21138D03004D69C5 /* HistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPresenter.swift; sourceTree = "<group>"; };
+		8AF667A121139007004D69C5 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AF667A32113900C004D69C5 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AF667A5211390AE004D69C5 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AF667A7211390B2004D69C5 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B6B2464C32544FCB81457C5 /* Pods-timer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-timer.release.xcconfig"; path = "Pods/Target Support Files/Pods-timer/Pods-timer.release.xcconfig"; sourceTree = "<group>"; };
 		FBE6D4EEF28D3B1AE33622F8 /* Pods-timer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-timer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-timer/Pods-timer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -43,6 +55,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AF667A6211390B2004D69C5 /* RealmSwift.framework in Frameworks */,
+				8AF667A4211390AE004D69C5 /* Realm.framework in Frameworks */,
+				8AF667A22113900C004D69C5 /* RxSwift.framework in Frameworks */,
+				8AF667A021139007004D69C5 /* RxCocoa.framework in Frameworks */,
 				3A71A4141FE63D7CF4372DE1 /* Pods_timer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,6 +88,7 @@
 		5EC1AB83869666DEBE644F34 /* timer */ = {
 			isa = PBXGroup;
 			children = (
+				8AF6679B211386A3004D69C5 /* history */,
 				8AB05FB020CFF7E600CF7863 /* timer */,
 				8ABCFFAB20BD5F7000A790A5 /* utils */,
 				5EC1AE63EDF4C3A4750D1A8D /* Info.plist */,
@@ -96,6 +113,10 @@
 		6B6215360B61B7943B1151D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8AF667A7211390B2004D69C5 /* RealmSwift.framework */,
+				8AF667A5211390AE004D69C5 /* Realm.framework */,
+				8AF667A32113900C004D69C5 /* RxSwift.framework */,
+				8AF667A121139007004D69C5 /* RxCocoa.framework */,
 				571AD97B075AD7795DF4E09D /* Pods_timer.framework */,
 			);
 			name = Frameworks;
@@ -117,6 +138,15 @@
 				8ABCFFAD20BD5F9200A790A5 /* Prefs.swift */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		8AF6679B211386A3004D69C5 /* history */ = {
+			isa = PBXGroup;
+			children = (
+				8AF6679C211386CD004D69C5 /* HistoryViewControler.swift */,
+				8AF6679E21138D03004D69C5 /* HistoryPresenter.swift */,
+			);
+			path = history;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +178,11 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = ivanlarin;
+				TargetAttributes = {
+					5EC1A7AD495BB2705D8A5B58 = {
+						DevelopmentTeam = P7BWL3P8G2;
+					};
+				};
 			};
 			buildConfigurationList = 5EC1A734647CD304F0521A04 /* Build configuration list for PBXProject "timer" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -205,11 +240,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-timer/Pods-timer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
@@ -226,7 +265,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EC1AB08F10FF828F1CA2E09 /* AppDelegate.swift in Sources */,
+				8AF6679F21138D03004D69C5 /* HistoryPresenter.swift in Sources */,
 				8AB05FAF20CFF44900CF7863 /* TimerViewControler.swift in Sources */,
+				8AF6679D211386CD004D69C5 /* HistoryViewControler.swift in Sources */,
 				8AB05FB220CFF80500CF7863 /* ITimerView.swift in Sources */,
 				8AB05FB420CFF81500CF7863 /* TimerPresenter.swift in Sources */,
 				5EC1AF2FC152B001DD0C58AD /* ViewController.swift in Sources */,
@@ -319,7 +360,7 @@
 			baseConfigurationReference = 8B6B2464C32544FCB81457C5 /* Pods-timer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = P7BWL3P8G2;
 				INFOPLIST_FILE = timer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -335,7 +376,7 @@
 			baseConfigurationReference = FBE6D4EEF28D3B1AE33622F8 /* Pods-timer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = P7BWL3P8G2;
 				INFOPLIST_FILE = timer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

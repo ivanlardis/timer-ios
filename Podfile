@@ -8,4 +8,5 @@ target 'timer' do
     pod 'RxCocoa',    '~> 4.0'
     use_frameworks!
     pod 'RealmSwift'
+      pod 'Alamofire', '~> 4.7'
 end

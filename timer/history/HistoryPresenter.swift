@@ -7,7 +7,7 @@
 //
  
 import RealmSwift
-
+import  Alamofire
 
 class HistoryPresenter {
     var iTimerView: HistoryViewControler
@@ -37,16 +37,62 @@ class HistoryPresenter {
     }
     
     func getData(){
-        var his =  HistoryModel.init()
-        his.cycleCount=1
         
-        save(historyModel: his)
         
-        let hisList = getListTrain()
+       getDataNW{hisList in
+            
+               print(hisList.count)
         
-        print("historyModels \(hisList.count)")
-    }
+        }
     
+        
+            
+        
+            
+            
+        
+    
+    }
+    func getDataNW(completion: @escaping ([HistoryModel]) -> Void) {
+        
+        
+        
+        var list = [HistoryModel]()
+        let url = URL(string: "https://timerble-8665b.firebaseio.com/messages.json")
+        
+        Alamofire.request(url!,
+                          method: .get)
+            .responseJSON { response in
+                if let value = response.result.value  as? [String: AnyObject] {
+                    
+                    print("111 \(value.count)")
+                    value.forEach{ (key,valuesss) in
+                      
+                        
+                        
+                        if let item = valuesss as? [String: AnyObject] {
+                            
+                            var  historyModel = HistoryModel.init()
+                            historyModel.cycleCount = item["cycleCount"] as! Int
+                            historyModel.restTime = item["restTime"] as! Int
+                            historyModel.setCount = item["setCount"] as! Int
+                            historyModel.workTime = item["workTime"] as! Int
+                            historyModel.time = item["time"] as! Int64
+                            historyModel.name = item["name"] as! String
+                            print("list apend")
+                            list.append(historyModel)
+                           
+                        }
+                        
+                    }
+                    
+                }
+                completion(list)
+                return
+        }
+        
+    
+    }
     
     
     
@@ -54,8 +100,8 @@ class HistoryPresenter {
 }
 
 
-class HistoryModel:Object {
-    
+class HistoryModel: Object {
+ 
     @objc dynamic var cycleCount: Int = 0
     @objc dynamic var restTime: Int = 0
      @objc dynamic var setCount: Int = 0

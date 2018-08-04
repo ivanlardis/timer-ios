@@ -24,6 +24,7 @@
 		8AF667A22113900C004D69C5 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF667A32113900C004D69C5 /* RxSwift.framework */; };
 		8AF667A4211390AE004D69C5 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF667A5211390AE004D69C5 /* Realm.framework */; };
 		8AF667A6211390B2004D69C5 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF667A7211390B2004D69C5 /* RealmSwift.framework */; };
+		8AF667A8211399A8004D69C5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF667A9211399A8004D69C5 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		8AF667A32113900C004D69C5 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AF667A5211390AE004D69C5 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AF667A7211390B2004D69C5 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AF667A9211399A8004D69C5 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B6B2464C32544FCB81457C5 /* Pods-timer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-timer.release.xcconfig"; path = "Pods/Target Support Files/Pods-timer/Pods-timer.release.xcconfig"; sourceTree = "<group>"; };
 		FBE6D4EEF28D3B1AE33622F8 /* Pods-timer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-timer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-timer/Pods-timer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AF667A8211399A8004D69C5 /* Alamofire.framework in Frameworks */,
 				8AF667A6211390B2004D69C5 /* RealmSwift.framework in Frameworks */,
 				8AF667A4211390AE004D69C5 /* Realm.framework in Frameworks */,
 				8AF667A22113900C004D69C5 /* RxSwift.framework in Frameworks */,
@@ -113,6 +116,7 @@
 		6B6215360B61B7943B1151D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8AF667A9211399A8004D69C5 /* Alamofire.framework */,
 				8AF667A7211390B2004D69C5 /* RealmSwift.framework */,
 				8AF667A5211390AE004D69C5 /* Realm.framework */,
 				8AF667A32113900C004D69C5 /* RxSwift.framework */,
@@ -240,6 +244,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-timer/Pods-timer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -247,6 +252,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",

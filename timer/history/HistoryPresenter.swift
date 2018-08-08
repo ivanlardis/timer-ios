@@ -40,18 +40,50 @@ class HistoryPresenter {
         
         
        getDataNW{hisList in
-            
-               print(hisList.count)
+        hisList.forEach({ (hismpd) in
+              print(hismpd.time)
+            }
+        )
+        
         
         }
     
         
+        addProduct(product: HistoryModel.init())
+        
             
         
             
             
         
     
+    }
+    func addProduct(product: HistoryModel) {
+        
+        let encoder = JSONEncoder()
+        let jsonData = try! encoder.encode(product)
+        
+        let url = URL(string:"https://timerble-8665b.firebaseio.com/messages/\(product.time).json")
+        
+        var request = URLRequest(url: url!)
+        request.httpMethod = HTTPMethod.put.rawValue
+        request.setValue("application/json; charset=UTF-8", forHTTPHeaderField: "Content-Type")
+        request.httpBody = jsonData
+        
+        Alamofire.request(request).responseJSON { response in
+          
+                print ("finish")
+               
+           
+        }
+    }
+    
+    
+    func saveDataNW(completion:  HistoryModel) {
+        
+        
+        
+        
     }
     func getDataNW(completion: @escaping ([HistoryModel]) -> Void) {
         
@@ -65,7 +97,6 @@ class HistoryPresenter {
             .responseJSON { response in
                 if let value = response.result.value  as? [String: AnyObject] {
                     
-                    print("111 \(value.count)")
                     value.forEach{ (key,valuesss) in
                       
                         
@@ -79,14 +110,16 @@ class HistoryPresenter {
                             historyModel.workTime = item["workTime"] as! Int
                             historyModel.time = item["time"] as! Int64
                             historyModel.name = item["name"] as! String
-                            print("list apend")
+                       
                             list.append(historyModel)
                            
                         }
                         
+                        
                     }
                     
                 }
+               
                 completion(list)
                 return
         }
@@ -100,14 +133,14 @@ class HistoryPresenter {
 }
 
 
-class HistoryModel: Object {
+class HistoryModel: Object, Encodable {
  
     @objc dynamic var cycleCount: Int = 0
     @objc dynamic var restTime: Int = 0
      @objc dynamic var setCount: Int = 0
     
     @objc dynamic var workTime: Int = 0
-    @objc dynamic var time: Int64 = 0
+    @objc dynamic var time: Int64 = 212
     @objc dynamic var name: String = ""
     
     

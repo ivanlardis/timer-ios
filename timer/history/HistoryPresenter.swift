@@ -16,40 +16,38 @@ class HistoryPresenter {
         self.iTimerView = iTimerView
     }
 
-    func save(historyModel:HistoryModel){
-        let realm = try! Realm()
-        try! realm.write {
-            realm.add(historyModel)
-        }
-        
-    }
-    func getListTrain() -> [HistoryModel] {
-        var list = [HistoryModel]()
- 
-        let realm = try! Realm()
-        let historyModels = realm.objects(HistoryModel.self)
-        historyModels.forEach{model in
-            
-            list.append(model)
-            }
-        return list
-        
-    }
     
     func getData(){
+        print("getData")
+        let dataDB = getDataDB();
+       
+         print("dataDB \( dataDB.count)")
+        iTimerView.show(models:   dataDB)
+      
+        
+        dataDB.forEach { (model) in
+            saveDataNW(product: model)
+        }
+        
+        
         
         
        getDataNW{hisList in
-        hisList.forEach({ (hismpd) in
-              print(hismpd.time)
+        hisList.forEach({ (model) in
+              self.saveToDB(historyModel: model)
             }
         )
         
+        print("getDataNW \( hisList.count)")
+        let dataDB1 = self.getDataDB();
+        
+        print("dataDB1 \( dataDB1.count)")
+       self.iTimerView.show(models:  dataDB1)
         
         }
-    
         
-        addProduct(product: HistoryModel.init())
+        
+     
         
             
         
@@ -58,7 +56,7 @@ class HistoryPresenter {
         
     
     }
-    func addProduct(product: HistoryModel) {
+    func saveDataNW(product: HistoryModel) {
         
         let encoder = JSONEncoder()
         let jsonData = try! encoder.encode(product)
@@ -79,12 +77,7 @@ class HistoryPresenter {
     }
     
     
-    func saveDataNW(completion:  HistoryModel) {
-        
-        
-        
-        
-    }
+   
     func getDataNW(completion: @escaping ([HistoryModel]) -> Void) {
         
         
@@ -129,7 +122,26 @@ class HistoryPresenter {
     
     
     
-    
+  
+    func saveToDB(historyModel:HistoryModel){
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(historyModel)
+        }
+        
+    }
+    func getDataDB() -> [HistoryModel] {
+        var list = [HistoryModel]()
+        
+        let realm = try! Realm()
+        let historyModels = realm.objects(HistoryModel.self)
+        historyModels.forEach{model in
+            
+            list.append(model)
+        }
+        return list
+        
+    }
 }
 
 
@@ -142,6 +154,8 @@ class HistoryModel: Object, Encodable {
     @objc dynamic var workTime: Int = 0
     @objc dynamic var time: Int64 = 212
     @objc dynamic var name: String = ""
-    
+    override class func primaryKey() -> String? {
+        return "time"
+    }
     
 }

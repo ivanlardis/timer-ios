@@ -14,6 +14,7 @@
 		5EC1AB0A603AC577A20DE85B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EC1AC5029832EC769709983 /* Main.storyboard */; };
 		5EC1AD0BD52CE79A8D5A2A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EC1AA10D38CB082FB9FC313 /* Assets.xcassets */; };
 		5EC1AF2FC152B001DD0C58AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC1A27B5B2B76122F02D2E1 /* ViewController.swift */; };
+		8A2A1DE7211B7C9700C3FACF /* HistoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2A1DE6211B7C9700C3FACF /* HistoryItem.swift */; };
 		8AB05FAF20CFF44900CF7863 /* TimerViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB05FAE20CFF44900CF7863 /* TimerViewControler.swift */; };
 		8AB05FB220CFF80500CF7863 /* ITimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB05FB120CFF80500CF7863 /* ITimerView.swift */; };
 		8AB05FB420CFF81500CF7863 /* TimerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB05FB320CFF81500CF7863 /* TimerPresenter.swift */; };
@@ -37,6 +38,7 @@
 		5EC1AC2D4499A33A206FABE8 /* timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = timer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC1AC85303241000C63ADE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5EC1AE63EDF4C3A4750D1A8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		8A2A1DE6211B7C9700C3FACF /* HistoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryItem.swift; sourceTree = "<group>"; };
 		8AB05FAE20CFF44900CF7863 /* TimerViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewControler.swift; sourceTree = "<group>"; };
 		8AB05FB120CFF80500CF7863 /* ITimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITimerView.swift; sourceTree = "<group>"; };
 		8AB05FB320CFF81500CF7863 /* TimerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPresenter.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			children = (
 				8AF6679C211386CD004D69C5 /* HistoryViewControler.swift */,
 				8AF6679E21138D03004D69C5 /* HistoryPresenter.swift */,
+				8A2A1DE6211B7C9700C3FACF /* HistoryItem.swift */,
 			);
 			path = history;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				5EC1AB08F10FF828F1CA2E09 /* AppDelegate.swift in Sources */,
 				8AF6679F21138D03004D69C5 /* HistoryPresenter.swift in Sources */,
 				8AB05FAF20CFF44900CF7863 /* TimerViewControler.swift in Sources */,
+				8A2A1DE7211B7C9700C3FACF /* HistoryItem.swift in Sources */,
 				8AF6679D211386CD004D69C5 /* HistoryViewControler.swift in Sources */,
 				8AB05FB220CFF80500CF7863 /* ITimerView.swift in Sources */,
 				8AB05FB420CFF81500CF7863 /* TimerPresenter.swift in Sources */,

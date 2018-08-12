@@ -26,7 +26,10 @@ class HistoryItem: UITableViewCell {
        setCount.text="Сеты \(historyModel.setCount)"
         restTime.text="Отдых \(historyModel.restTime)"
         workTime.text="Работа \(historyModel.workTime)"
-        time.text="Время \(historyModel.time)"
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "MM-dd HH:mm:ss"
+        var dateString = dateFormatterGet.string(from: Date.init(timeIntervalSince1970: Double(historyModel.time)/1000))
+        time.text=" \(dateString)"
         
     }
 }

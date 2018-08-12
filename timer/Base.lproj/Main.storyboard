@@ -12,7 +12,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--ИСТОРИЯ-->
         <scene sceneID="MTK-V8-zVN">
             <objects>
                 <tableViewController id="kBO-ko-m0f" customClass="HistoryViewControler" customModule="timer" sceneMemberID="viewController">
@@ -53,7 +53,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44v-zj-wZs">
-                                                    <rect key="frame" x="245" y="9" width="98" height="21"/>
+                                                    <rect key="frame" x="183" y="9" width="160" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -66,13 +66,11 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrK-Ou-Xcv">
-                                                    <rect key="frame" x="0.0" y="0.0" width="102" height="32"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="26" id="SlD-1C-WYW"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrK-Ou-Xcv">
+                                                    <rect key="frame" x="0.0" y="9" width="102" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                    <color key="textColor" red="0.15262478590011597" green="0.27354204654693604" blue="0.96292024850845337" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -106,17 +104,17 @@
                             <outlet property="delegate" destination="kBO-ko-m0f" id="2qJ-OM-ASg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="DYA-MX-gea"/>
+                    <navigationItem key="navigationItem" title="ИСТОРИЯ" id="DYA-MX-gea"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zpm-x2-1rV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2600.8000000000002" y="187.55622188905548"/>
         </scene>
-        <!--История-->
+        <!--Navigation Controller-->
         <scene sceneID="UiH-TP-SEo">
             <objects>
                 <navigationController id="a7W-hB-zWw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="История" id="voo-xB-xlL"/>
+                    <tabBarItem key="tabBarItem" systemItem="history" id="voo-xB-xlL"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Za1-xL-n7q">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -129,7 +127,7 @@
             </objects>
             <point key="canvasLocation" x="1878" y="189"/>
         </scene>
-        <!--Настройка-->
+        <!--Seting View Controler-->
         <scene sceneID="YGR-eG-x4n">
             <objects>
                 <tableViewController id="OnQ-S7-GSU" customClass="SetingViewControler" customModule="timer" sceneMemberID="viewController">
@@ -408,7 +406,7 @@
                             <outlet property="delegate" destination="OnQ-S7-GSU" id="9Sn-Pe-7R6"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Настройка" id="dEN-74-bMh"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="dEN-74-bMh"/>
                     <connections>
                         <outlet property="countSetTimeTextView" destination="IrP-VZ-voy" id="tfk-3m-sui"/>
                         <outlet property="cycleTimeTextView" destination="8RR-Dn-PTk" id="zqr-WN-Lxh"/>
@@ -430,12 +428,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3A-eh-EJe">
-                                <rect key="frame" x="170.5" y="300.5" width="34" height="66"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="55"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="СЕТЫ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGd-2g-8OE">
                                 <rect key="frame" x="16" y="573" width="65.5" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -452,23 +444,39 @@
                                 <rect key="frame" x="159" y="80" width="57" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfj-st-S1H">
-                                <rect key="frame" x="159" y="80" width="57" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Начать" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfj-st-S1H">
+                                <rect key="frame" x="148.5" y="80" width="78" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ra5-0p-aVj">
+                                <rect key="frame" x="87" y="233.5" width="200" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3A-eh-EJe">
+                                        <rect key="frame" x="59" y="67" width="83" height="66"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="42n-Yi-RGQ"/>
+                                    <constraint firstAttribute="width" constant="200" id="74O-sD-5IE"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Mfj-st-S1H" firstAttribute="centerX" secondItem="cd1-wO-Kma" secondAttribute="centerX" id="67t-HA-vKV"/>
+                            <constraint firstItem="Ra5-0p-aVj" firstAttribute="centerY" secondItem="cd1-wO-Kma" secondAttribute="centerY" id="Fxe-bo-ba3"/>
                             <constraint firstItem="q7z-m7-Tj4" firstAttribute="bottom" secondItem="g2Y-3m-o6T" secondAttribute="bottom" constant="16" id="KsN-ct-1IG"/>
-                            <constraint firstItem="w3A-eh-EJe" firstAttribute="centerY" secondItem="cd1-wO-Kma" secondAttribute="centerY" id="PE9-Xa-PJP"/>
                             <constraint firstItem="q7z-m7-Tj4" firstAttribute="trailing" secondItem="g2Y-3m-o6T" secondAttribute="trailing" constant="16" id="PKa-3o-Yk6"/>
                             <constraint firstItem="hGd-2g-8OE" firstAttribute="leading" secondItem="q7z-m7-Tj4" secondAttribute="leading" constant="16" id="aNO-Dp-IIr"/>
                             <constraint firstItem="q7z-m7-Tj4" firstAttribute="bottom" secondItem="hGd-2g-8OE" secondAttribute="bottom" constant="16" id="e60-3B-clg"/>
+                            <constraint firstItem="Ra5-0p-aVj" firstAttribute="centerX" secondItem="cd1-wO-Kma" secondAttribute="centerX" id="jIz-SW-oYf"/>
                             <constraint firstItem="Mfj-st-S1H" firstAttribute="top" secondItem="q7z-m7-Tj4" secondAttribute="top" constant="16" id="vJ4-f4-5cZ"/>
-                            <constraint firstItem="w3A-eh-EJe" firstAttribute="centerX" secondItem="cd1-wO-Kma" secondAttribute="centerX" id="vNm-lf-tdo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="q7z-m7-Tj4"/>
                     </view>
@@ -487,6 +495,7 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="customView" destination="Ra5-0p-aVj" id="UON-LN-1re"/>
                         <outlet property="cycleLabel" destination="g2Y-3m-o6T" id="Meh-c0-YTc"/>
                         <outlet property="setLabel" destination="hGd-2g-8OE" id="GRR-1q-exz"/>
                         <outlet property="timeLabel" destination="w3A-eh-EJe" id="VX1-Ra-5Aa"/>
@@ -520,7 +529,7 @@
         <scene sceneID="fNb-gm-cXL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6NH-MD-f4y" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="history" id="Ize-s0-XmB"/>
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="Ize-s0-XmB"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Db5-96-udH">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

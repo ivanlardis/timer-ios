@@ -36,7 +36,7 @@ enum Prefs: String {
         
         switch pref {
         case PREPARATION_TIME:
-            min = 0
+            min = 1
             break
         case WORK_TIME:
             min=1
@@ -51,6 +51,7 @@ enum Prefs: String {
             min=1
             break
         default:
+            min=1
             break
             
         }
